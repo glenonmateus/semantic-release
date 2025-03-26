@@ -7,8 +7,30 @@
 > an explicit commit history; which makes it easier to write automated
 > tools on top of.
 
+Conventional commit is a specification, a set of rules that have to be
+followed when writing commit messages. It is heavily inspired by Angular
+commit guidelines, and follows this structure
+
+![commits](images/conventional-commits.webp)
+
+Only `type` and `description` are mandatory, rest everything is optional.
+The value of `type` is important and needs to be only one of the following
+
+- feat: A new feature
+- fix: A bug fix
+- docs: Documentation only changes
+- style: Changes that do not affect the meaning of the code (white-space,
+  formatting, missing semi-colons, etc)
+- refactor: A code change that neither fixes a bug nor adds a feature
+- perf: A code change that improves performance
+- test: Adding missing or correcting existing tests
+- chore: Changes to the build process or auxiliary tools and libraries
+  such as documentation generation
+
 This makes your commit messages readable not only to humans but also to bots,
-you can now automate releases ([SemVer](https://semver.org/)), automate changelogs, and more.
+you can now automate releases ([SemVer](https://semver.org/)), automate changelogs,
+and more.
+
 ## Semantic Versioning
 
 Semantic Versioning (also called SemVer) is a specification,
