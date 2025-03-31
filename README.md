@@ -45,4 +45,3 @@ this structure — `MAJOR.MINOR.PATCH` where,
 1. MAJOR version is incremented when you make any breaking change
 2. MINOR version is incremented when you add a new feature/functionality
 3. PATCH version is incremented when you make bug fixes
-
