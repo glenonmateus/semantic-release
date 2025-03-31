@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/glenonmateus/semantic-release/compare/v1.0.0...1.1.0) (2025-03-31)
+
+
+### Features
+
+* tagFormat ([08ede95](https://github.com/glenonmateus/semantic-release/commit/08ede950ef3e53498f4823ddacd283e722a21153))
+* tagFormat ([#2](https://github.com/glenonmateus/semantic-release/issues/2)) ([1d04a59](https://github.com/glenonmateus/semantic-release/commit/1d04a598ed106096437c0913c153557ded292e7d))
+
 ## 1.0.0 (2025-03-31)
 
 
