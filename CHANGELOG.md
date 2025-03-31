@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0-beta.2](https://github.com/glenonmateus/semantic-release/compare/1.0.0-beta.1...1.0.0-beta.2) (2025-03-31)
+
+
+### Bug Fixes
+
+* add release fix test ([f51c44b](https://github.com/glenonmateus/semantic-release/commit/f51c44b9fc91a197ab9511cfdbd8e226ea234d4a))
+* add release fix test ([#7](https://github.com/glenonmateus/semantic-release/issues/7)) ([77abde3](https://github.com/glenonmateus/semantic-release/commit/77abde3857ce2c29b578f16aa0a26d1a53b1c065))
+
 ## 1.0.0-beta.1 (2025-03-31)
 
 
