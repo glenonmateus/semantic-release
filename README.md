@@ -11,7 +11,7 @@ Conventional commit is a specification, a set of rules that have to be
 followed when writing commit messages. It is heavily inspired by Angular
 commit guidelines, and follows this structure
 
-![commits](images/conventional-commits.webp)
+![commits](docs/images/conventional-commits.webp)
 
 Only `type` and `description` are mandatory, rest everything is optional.
 The value of `type` is important and needs to be only one of the following
@@ -37,7 +37,7 @@ Semantic Versioning (also called SemVer) is a specification,
 a simple set of rules that dictates how version numbers of your
 projects are assigned and incremented.
 
-![SemVer](images/semver.webp)
+![SemVer](docs/images/semver.webp)
 
 As per this specification, any version number should be complying with
 this structure — `MAJOR.MINOR.PATCH` where,
@@ -74,15 +74,15 @@ in the previous step
 
 `Settings -> Secrets and variables -> New repository secret`
 
-![new repo secret](images/new-repo-secret.png)
+![new repo secret](docs/images/new-repo-secret.png)
 
-![semantic release secret](images/semantic-release-secret.png)
+![semantic release secret](docs/images/semantic-release-secret.png)
 
 ### Default merge commit message
 
 Settings -> Pull Requests -> Default commit message -> Pull request title
 and description
 
-![merge commit message](images/default-merge-commit.png)
+![merge commit message](docs/images/default-merge-commit.png)
 
 optional: change squash merging commit message
