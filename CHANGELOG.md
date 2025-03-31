@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0-hml.1](https://github.com/glenonmateus/semantic-release/compare/v1.0.0...1.1.0-hml.1) (2025-03-31)
+
+
+### Features
+
+* add prerelease ([6fb54d6](https://github.com/glenonmateus/semantic-release/commit/6fb54d60a4c1d68025c06983e1337a44ab20b5b5))
+* tagFormat ([08ede95](https://github.com/glenonmateus/semantic-release/commit/08ede950ef3e53498f4823ddacd283e722a21153))
+
 ## 1.0.0 (2025-03-31)
 
 
