@@ -72,4 +72,6 @@ Token permissions:
 Settings -> Pull Requests -> Default commit message -> Pull request title
 and description
 
+![merge commit message](images/default-merge-commit.png)
+
 optional: change squash merging commit message
