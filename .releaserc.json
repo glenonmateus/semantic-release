@@ -1,5 +1,8 @@
 {
-  "branches": [{ "name": "main" }, { "name": "hml", "prerelease": true }],
+  "branches": [
+    { "name": "main" },
+    { "name": "hml", "channel": "beta", "prerelease": true }
+  ],
   "ci": false,
   "tagFormat": "${version}",
   "plugins": [
