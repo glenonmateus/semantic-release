@@ -45,3 +45,31 @@ this structure — `MAJOR.MINOR.PATCH` where,
 1. MAJOR version is incremented when you make any breaking change
 2. MINOR version is incremented when you add a new feature/functionality
 3. PATCH version is incremented when you make bug fixes
+
+## Setup
+
+### Create Github [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+
+Token permissions:
+
+`Read Access`
+
+- Variables
+- Environments
+- Metadata (default)
+- Secrets
+
+`Read/Write Access`
+
+- Contents
+- Commit statuses
+- Issue
+- Pull Requests
+- Workflows
+
+### Default merge commit message
+
+Settings -> Pull Requests -> Default commit message -> Pull request title
+and description
+
+optional: change squash merging commit message
