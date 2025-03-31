@@ -67,6 +67,17 @@ Token permissions:
 - Pull Requests
 - Workflows
 
+### Secrets
+
+Add secret `SEMANTIC_RELEASE_TOKEN` with the value of the token created
+in the previous step
+
+`Settings -> Secrets and variables -> New repository secret`
+
+![new repo secret](images/new-repo-secret.png)
+
+![semantic release secret](images/semantic-release-secret.png)
+
 ### Default merge commit message
 
 Settings -> Pull Requests -> Default commit message -> Pull request title
