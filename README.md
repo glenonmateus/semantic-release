@@ -80,8 +80,8 @@ in the previous step
 
 ### Default merge commit message
 
-Settings -> Pull Requests -> Default commit message -> Pull request title
-and description
+`Settings -> Pull Requests -> Default commit message -> Pull request title
+and description`
 
 ![merge commit message](images/default-merge-commit.png)
 
