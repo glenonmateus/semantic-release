@@ -1,3 +1,27 @@
+const branches = [{ name: "main" }, { name: "hml", prerelease: "beta" }];
+const config = {
+  ci: false,
+  tagFormat: "${version}",
+};
+const releasePlugins = [
+  [
+    "@semantic-release/changelog",
+    {
+      changelogFile: "CHANGELOG.md",
+      changelogTitle:
+        "# Changelog\n\nAll notable changes to this project will be documented in this file.",
+    },
+  ],
+  [
+    "@semantic-release/git",
+    {
+      assets: ["CHANGELOG.md"],
+      message:
+        "chore(release): version ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
+    },
+  ],
+];
+
 /**
  * Checks if the current branch is a production branch.
  * @returns {boolean} True if the branch is a production branch, false otherwise.
@@ -5,10 +29,11 @@
 const isProductionBranch = () => {
   const branchName =
     process.env.GITHUB_REF_NAME || process.env.CI_COMMIT_REF_NAME;
-  return branches.some((branch) => {
-    (typeof branch === "string" && branch === branchName) ||
-      (branch.name === branchName && !branch.prerelease);
-  });
+  return branches.some(
+    (branch) =>
+      (typeof branch.name === "string" && branch.name === branchName) ||
+      (branch.name === branchName && !branch.prerelease),
+  );
 };
 
 /**
@@ -36,30 +61,6 @@ const getCIPlataformConfiguration = () => {
   }
   return [];
 };
-
-const branches = [{ name: "main" }, { name: "hml", prerelease: "beta" }];
-const config = {
-  ci: false,
-  tagFormat: "${version}",
-};
-const releasePlugins = [
-  [
-    "@semantic-release/changelog",
-    {
-      changelogFile: "CHANGELOG.md",
-      changelogTitle:
-        "# Changelog\n\nAll notable changes to this project will be documented in this file.",
-    },
-  ],
-  [
-    "@semantic-release/git",
-    {
-      assets: ["CHANGELOG.md"],
-      message:
-        "chore(release): version ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
-    },
-  ],
-];
 
 module.exports = {
   branches,
