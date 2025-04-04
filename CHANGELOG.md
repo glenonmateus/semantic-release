@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.3](https://github.com/glenonmateus/semantic-release/compare/1.2.2...1.2.3) (2025-04-04)
+
+
+### Reverts
+
+* Revert "ci: add changelog prerelease file" ([ef619bd](https://github.com/glenonmateus/semantic-release/commit/ef619bd4c3cb87a4c91d28902352131fdf8335d9))
+
 ## [1.2.2](https://github.com/glenonmateus/semantic-release/compare/1.2.1...1.2.2) (2025-04-04)
 
 
