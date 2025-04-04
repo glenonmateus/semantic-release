@@ -1,8 +1,4 @@
 const branches = [{ name: "main" }, { name: "hml", prerelease: "beta" }];
-const config = {
-  ci: false,
-  tagFormat: "${version}",
-};
 const releasePlugins = [
   [
     "@semantic-release/changelog",
@@ -30,9 +26,7 @@ const isProductionBranch = () => {
   const branchName =
     process.env.GITHUB_REF_NAME || process.env.CI_COMMIT_REF_NAME;
   return branches.some(
-    (branch) =>
-      (typeof branch.name === "string" && branch.name === branchName) ||
-      (branch.name === branchName && !branch.prerelease),
+    (branch) => branch.name === branchName && !branch.prerelease,
   );
 };
 
@@ -64,7 +58,8 @@ const getCIPlataformConfiguration = () => {
 
 module.exports = {
   branches,
-  config,
+  ci: false,
+  tagFormat: "\${version}",
   plugins: [
     ["@semantic-release/commit-analyzer", { preset: "conventionalcommits" }],
     [
