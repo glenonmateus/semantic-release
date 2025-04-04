@@ -15,3 +15,12 @@ jobs:
       repository_owner: ${{ github.repository_owner }}
     secrets:
       semantic_release_token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
+
+  branch-sync:
+    needs: [release]
+    name: Branch Sync
+    uses: glenonmateus/actions/.github/workflows/branch-sync.yml@main
+    if: github.ref == 'refs/heads/main'
+    with:
+      from_branch: main
+      to_branch: hml
