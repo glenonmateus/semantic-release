@@ -9,6 +9,7 @@ on:
 
 jobs:
   release:
+    name: Semantic Release
     uses: glenonmateus/actions/.github/workflows/release.yml@main
     with:
       repository_owner: ${{ github.repository_owner }}
