@@ -30,9 +30,7 @@ const isProductionBranch = () => {
   const branchName =
     process.env.GITHUB_REF_NAME || process.env.CI_COMMIT_REF_NAME;
   return branches.some(
-    (branch) =>
-      (typeof branch.name === "string" && branch.name === branchName) ||
-      (branch.name === branchName && !branch.prerelease),
+    (branch) => branch.name === branchName && !branch.prerelease,
   );
 };
 
