@@ -31,6 +31,15 @@ This makes your commit messages readable not only to humans but also to bots,
 you can now automate releases ([SemVer](https://semver.org/)), automate changelogs,
 and more.
 
+The table below shows which commit message gets you which release type when
+semantic-release runs
+
+| Commit message                                                                                                                                                                                   | Release type                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| `fix(pencil): stop graphite breaking when too much pressure applied`                                                                                                                             | ~~Patch~~ Fix Release                                                                                          |
+| `feat(pencil): add 'graphiteWidth' option`                                                                                                                                                       | ~~Minor~~ Feature Release                                                                                      |
+| `perf(pencil): remove graphiteWidth option`<br><br>`BREAKING CHANGE: The graphiteWidth option has been removed.`<br>`The default graphite width of 10mm is always used for performance reasons.` | ~~Major~~ Breaking Release <br /> (Note that the `BREAKING CHANGE:` token must be in the footer of the commit) |
+
 ## Semantic Versioning
 
 Semantic Versioning (also called SemVer) is a specification,
