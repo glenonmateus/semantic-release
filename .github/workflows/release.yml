@@ -8,14 +8,6 @@ on:
       - hml
 
 jobs:
-  setting:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Setting releaserc
-        if: contains('refs/heads/hml', github.ref)
-        run: |
-          jq 'del(.plugins[] | select(.[0] |contains("changelog")))' .releaserc.json > .releaserc.json
-          echo .releaserc.json
   release:
     name: Semantic Release
     uses: glenonmateus/actions/.github/workflows/release.yml@main
