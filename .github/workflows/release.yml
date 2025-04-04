@@ -19,7 +19,7 @@ jobs:
   sync-branch:
     needs: [release]
     name: Sync Branches
-    uses: glenonmateus/actions/.github/workflows/branch-sync.yml@main
+    uses: glenonmateus/actions/.github/workflows/sync-branches.yml@main
     if: github.ref == 'refs/heads/main'
     with:
       from_branch: main
