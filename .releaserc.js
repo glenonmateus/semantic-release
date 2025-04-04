@@ -1,8 +1,4 @@
 const branches = [{ name: "main" }, { name: "hml", prerelease: "beta" }];
-const config = {
-  ci: false,
-  tagFormat: "${version}",
-};
 const releasePlugins = [
   [
     "@semantic-release/changelog",
@@ -62,7 +58,8 @@ const getCIPlataformConfiguration = () => {
 
 module.exports = {
   branches,
-  config,
+  ci: false,
+  tagFormat: "\${version}",
   plugins: [
     ["@semantic-release/commit-analyzer", { preset: "conventionalcommits" }],
     [
