@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1](https://github.com/glenonmateus/semantic-release/compare/1.0.0...1.0.1) (2025-04-04)
+
+
+### Bug Fixes
+
+* add new ([4c11b04](https://github.com/glenonmateus/semantic-release/commit/4c11b04493be33b6a351deafe33481b0a2a00b41))
+* new ([#22](https://github.com/glenonmateus/semantic-release/issues/22)) ([1490584](https://github.com/glenonmateus/semantic-release/commit/1490584aa7eb3be0e013cb7a62d57ae32d95b37f))
+* new ([#23](https://github.com/glenonmateus/semantic-release/issues/23)) ([28d9d5c](https://github.com/glenonmateus/semantic-release/commit/28d9d5ca56566767b5da66a03ad3c3b109ae0f10))
+
 ## 1.0.0 (2025-04-04)
 
 
