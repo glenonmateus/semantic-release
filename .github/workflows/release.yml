@@ -16,11 +16,11 @@ jobs:
     secrets:
       semantic_release_token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
 
-  # sync-branches:
-  #   needs: [release]
-  #   name: Sync Branches
-  #   if: github.ref == 'refs/heads/main'
-  #   uses: glenonmateus/actions/.github/workflows/sync-branches.yml@main
-  #   with:
-  #     from_branch: main
-  #     to_branch: hml
+  sync-branch:
+    needs: [release]
+    name: Sync Branches
+    uses: glenonmateus/actions/.github/workflows/branch-sync.yml@main
+    if: github.ref == 'refs/heads/main'
+    with:
+      from_branch: main
+      to_branch: hml

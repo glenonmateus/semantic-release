@@ -1,4 +1,23 @@
 const branches = [{ name: "main" }, { name: "hml", prerelease: "beta" }];
+const releasePlugins = [
+  [
+    "@semantic-release/changelog",
+    {
+      changelogFile: "CHANGELOG.md",
+      changelogTitle:
+        "# Changelog\n\nAll notable changes to this project will be documented in this file.",
+    },
+  ],
+  [
+    "@semantic-release/git",
+    {
+      assets: ["CHANGELOG.md"],
+      message:
+        "chore(release): version ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
+    },
+  ],
+];
+
 /**
  * Checks if the current branch is a production branch.
  * @returns {boolean} True if the branch is a production branch, false otherwise.
@@ -37,10 +56,6 @@ const getCIPlataformConfiguration = () => {
   return [];
 };
 
-const changelog = isProductionBranch()
-  ? "CHANGELOG.md"
-  : "CHANGELOG-prerelease.md";
-
 module.exports = {
   branches,
   ci: false,
@@ -51,22 +66,7 @@ module.exports = {
       "@semantic-release/release-notes-generator",
       { preset: "conventionalcommits" },
     ],
-    [
-      "@semantic-release/changelog",
-      {
-        changelogFile: changelog,
-        changelogTitle:
-          "# Changelog\n\nAll notable changes to this project will be documented in this file.",
-      },
-    ],
-    [
-      "@semantic-release/git",
-      {
-        assets: [changelog],
-        message:
-          "chore(release): version ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
-      },
-    ],
     ...getCIPlataformConfiguration(),
+    ...(isProductionBranch() ? releasePlugins : []),
   ],
 };
