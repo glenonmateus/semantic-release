@@ -22,7 +22,6 @@ jobs:
     uses: glenonmateus/actions/.github/workflows/sync-branches.yml@main
     if: github.ref == 'refs/heads/main'
     with:
-      from_branch: main
-      to_branch: hml
+      branch: hml
     secrets:
       token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
