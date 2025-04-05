@@ -24,3 +24,5 @@ jobs:
     with:
       from_branch: main
       to_branch: hml
+    secrets:
+      token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
